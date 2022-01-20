@@ -6,17 +6,18 @@ public class StudentManager {
 	
 	ArrayList<Student> students = new ArrayList<Student>();
 	
-	public void add(Student student) 
+	public void add(Student addStudent) 
 	{
 		
-			for (Student student1 : students) {
-				if(student1.getIndentityNumber()==student.getIndentityNumber()) {
-					System.out.println("You have already registered.");
+			for (Student student : students) {
+				if(student.getIndentityNumber()==addStudent.getIndentityNumber()) {
+					System.out.println("You have tried to add already registered student..");
 					return;
-				}else {
-					this.students.add(student);
 				}
 			}
+			
+			this.students.add(addStudent);
+			System.out.println("Student " + addStudent.getFirstName() + " added!");
 	}
 	
 	public void delete(int id) 
@@ -28,19 +29,24 @@ public class StudentManager {
 				studentToDelete=student;
 			}
 		}
-		
+		System.out.println("Student " + studentToDelete.getFirstName() + " is deleted!");
 		students.remove(studentToDelete);
 	}
 	
 	
 	public void update(Student updatedStudent) 
 	{
-		for (Student student : students) 
-		{
-			if(student.getId()==updatedStudent.getId()) 
-			{
-				student=updatedStudent;
+		for (Student student : students) {
+			if(student.getId() == updatedStudent.getId()) {
+				
+				students.set(students.indexOf(student), updatedStudent);
+				System.out.println("Student " + student.getId() + " is updated");
+				break;
+				
+			}else{
+				System.out.println("There is no student to update");
 			}
+				
 		}
 	}
 	
