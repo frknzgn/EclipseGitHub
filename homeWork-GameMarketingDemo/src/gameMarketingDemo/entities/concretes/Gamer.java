@@ -13,7 +13,7 @@ public class Gamer implements Entity{
 	private String nationilityId;
 	private String gender;
 	private int birthYear;
-	
+	private double balance;
 	
 	
 	public Gamer() {
@@ -21,7 +21,7 @@ public class Gamer implements Entity{
 	}
 	
 	public Gamer(int id, String firsName, String lastName, String userName, String password, String eMail,
-			String nationilityId, String gender,int birthYear) {
+			String nationilityId, String gender,int birthYear,double balance) {
 		super();
 		this.id = id;
 		this.firsName = firsName;
@@ -32,6 +32,7 @@ public class Gamer implements Entity{
 		this.nationilityId = nationilityId;
 		this.gender = gender;
 		this.birthYear=birthYear;
+		this.balance=balance;
 }
 	
 	public int getId() {
@@ -89,6 +90,14 @@ public class Gamer implements Entity{
 
 	public void setBirthYear(int birthYear) {
 		this.birthYear = birthYear;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	
 	

@@ -17,7 +17,7 @@ public class SaleManager implements SaleService{
 				salePrice=game.getPrice();
 			}
 		
-		System.out.println(game.getName()+ " bought by "+gamer.getUserName()+" via " + campaign.getName()+ " campaing.");
+		System.out.println(game.getName()+ " bought by "+gamer.getUserName()+" via " + campaign.getName()+ " campaing. " + salePrice + "TL");
 		
 	}
 
