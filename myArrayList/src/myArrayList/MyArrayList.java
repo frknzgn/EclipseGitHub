@@ -2,8 +2,6 @@ package myArrayList;
 
 import java.util.Arrays;
 
-
-
 public class MyArrayList<T> {
 	
 	public int length=0;
@@ -12,7 +10,7 @@ public class MyArrayList<T> {
 	
 	
 	public MyArrayList() {
-		array = new Object[length];
+		array =new Object[length];
 	}
 
 
@@ -25,6 +23,14 @@ public class MyArrayList<T> {
 		array=tempArray;
 	}
 	
+	public void update(int index,T entity) {
+		if (array[0] != null) {
+			array[index]=entity;
+			}
+		 else {
+			System.out.println("Dizide güncellenecek eleman yok");
+		}
+	}
 
 	public int size() {
 		return array.length;
@@ -38,8 +44,9 @@ public class MyArrayList<T> {
 		}return false;
 	}
 	
-	public void getAll() {
-		System.out.println(Arrays.toString(array));
+
+	public  Object getAll() {
+		return array;
 	}
 	
 	

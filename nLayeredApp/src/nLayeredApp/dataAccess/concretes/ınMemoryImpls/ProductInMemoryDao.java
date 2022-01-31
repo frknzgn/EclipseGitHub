@@ -27,7 +27,7 @@ public class ProductInMemoryDao implements ProductDao {
 			System.out.println(productArrayList.contains(entity));
 		}
 	}
-	 public void getAll() {
+	 public ArrayList<Product> getAll() {
 		 productArrayList.getAll();
 	 }
 
